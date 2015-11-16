@@ -1,0 +1,95 @@
+﻿body {
+    font-size: .85em;
+    font-family: "Segoe UI", Verdana, Helvetica, Sans-Serif;
+    color: #232323;
+    background-color: #fff;
+}
+
+header, footer, nav, section {
+    display: block;
+}
+.s7website {
+width: 100%;
+padding: 15px;
+background-color: #f2f2f2;
+margin: 27px 0 0 0;
+-webkit-box-shadow: 0 15px 25px -7px rgba(0, 0, 0, 0.1);
+-moz-box-shadow: 0 15px 25px -7px rgba(0, 0, 0, 0.1);
+box-shadow: 0 15px 25px -7px rgba(0, 0, 0, 0.1);
+-webkit-box-sizing: border-box;
+-moz-box-sizing: border-box;
+box-sizing: border-box;
+}
+/* 
+Generic Styling, for Desktops/Laptops 
+*/
+.s7website table { 
+ width: 100%; 
+ border-collapse: collapse; 
+}
+/* Zebra striping */
+.s7website tr:nth-of-type(odd) { 
+ background: #eee; 
+}
+.s7website th { 
+ background: #333; 
+ color: white; 
+ font-weight: bold; 
+ font-size:large;
+}
+.s7website td, .s7website th { 
+ padding: 6px; 
+ border: 1px solid #ccc; 
+font-size:medium;
+ text-align: center; 
+}
+
+/* Styles for basic forms
+-----------------------------------------------------------*/
+fieldset {
+    border: 1px solid #ddd;
+    padding: 0 1.4em 1.4em 1.4em;
+    margin: 0 0 1.5em 0;
+}
+
+legend {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+textarea {
+    min-height: 75px;
+}
+
+.editor-label {
+    margin: 1em 0 0 0;
+}
+
+.editor-field {
+    margin: 0.5em 0 0 0;
+}
+
+
+/* Styles for validation helpers
+-----------------------------------------------------------*/
+.field-validation-error {
+    color: #f00;
+}
+
+.field-validation-valid {
+    display: none;
+}
+
+.input-validation-error {
+    border: 1px solid #f00;
+    background-color: #fee;
+}
+
+.validation-summary-errors {
+    font-weight: bold;
+    color: #f00;
+}
+
+.validation-summary-valid {
+    display: none;
+}

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/RMS.InfoProvider.Center.Objects" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/.RMS.InfoProvider.Center.Objects" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://192.168.3.107:8000/InfoProviderCenter?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/RMS.InfoProvider.ObjectModel.RMSObjects" />
+  <xs:complexType name="ArrayOfAgent">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Agent" nillable="true" type="tns:Agent" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAgent" nillable="true" type="tns:ArrayOfAgent" />
+  <xs:complexType name="Agent">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CertificatePath" nillable="true" type="xs:string" />
+      <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/RMS.InfoProvider.ObjectModel.RMSObjects" minOccurs="0" name="RMSBridges" nillable="true" type="q1:ArrayOfRMSBridge" />
+      <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/RMS.InfoProvider.ObjectModel.RMSObjects" minOccurs="0" name="RMSServer" nillable="true" type="q2:RMSServer" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Agent" nillable="true" type="tns:Agent" />
+</xs:schema>

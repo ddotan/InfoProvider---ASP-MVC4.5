@@ -1,0 +1,52 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    @Scripts.Render("~/bundles/jquery")
+        @RenderSection("scripts", required: false)
+    <script src="~/Scripts/jquery-2.1.4.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <link href="~/Content/Site.css" rel="stylesheet" />
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Content/jquery.dataTables.css" rel="stylesheet" />
+    <script src="~/Scripts/jquery.dataTables.min.js"></script>
+    <style>
+        table.dataTable thead .sorting {
+            background: url('/Content/images/sort_both.png') no-repeat center right;
+            background-color:black;
+        }
+
+        table.dataTable thead .sorting_asc {
+            background: url('/Content/images/sort_asc.png') no-repeat center right;
+            background-color: black;
+        }
+
+        table.dataTable thead .sorting_desc {
+            background: url('/Content/images/sort_desc.png') no-repeat center right;
+            background-color: black;
+        }
+
+        table.dataTable thead .sorting_asc_disabled {
+            background: url('/Content/images/sort_asc_disabled.png') no-repeat center right;
+            background-color: black;
+        }
+
+        table.dataTable thead .sorting_desc_disabled {
+            background: url('/Content/images/sort_desc_disabled.png') no-repeat center right;
+            background-color: black;
+        }
+    </style>
+</head>
+<body>
+    @RenderBody()
+
+   <footer style="text-align:center; font-size:medium">
+       Copyright &copy; <a href="mailto:dotan.douek@leverate.com?subject=LXRisk Credentials" style="display: inline-block; font-weight: bold;">Dotan Douek</a> 2015-<script type="text/javascript">d = new Date();document.write(d.getFullYear());</script>
+   </footer>
+</body>
+
+</html>

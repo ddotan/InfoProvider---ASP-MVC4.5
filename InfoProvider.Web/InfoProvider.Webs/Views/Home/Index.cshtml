@@ -1,0 +1,105 @@
+﻿@model IEnumerable<InfoProvider.Webs.Models.RMSAgent>
+
+    <script>
+        $(document).ready(function () {
+            $('#myTable').DataTable({ "bSort": true, "iDisplayLength": 25 });
+        });
+        function downloadCertClipBoard(text) {
+            window.prompt("Copy to clipboard: Ctrl+C, \nOpen new browser and paste it. ", text);
+        }
+        //function downloadCert(text) {
+        //    var currentPath = document.location.origin;
+        //    window.location.href = currentPath + "/Certificates/Download?Name=" + text;
+        //}
+    </script>
+    @{
+        ViewBag.Title = "LXRisk Credentials";
+        Layout = "~/Views/Shared/_Layout.cshtml";
+    }
+
+    <div>
+        Update time: @ViewBag.updateTime
+    </div>
+    <h1 style="text-align:center;">LXRisk credentials</h1>
+    <div style="text-align:center; font-size:large; font-family:David;color:black;">
+        <a class="btn btn-default" onclick="javascript: downloadCertClipBoard('@ViewBag.mainMT')">Click here to download <div style="font-weight:bold;display:inline-block;"> mainCert.cert</div> certificate</a>
+    </div>
+
+    <table id="myTable" class="s7website">
+
+        <thead>
+
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Central)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Broker)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Certificate)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Port)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Groups)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Platform)
+                </th>
+
+                <th>
+                    @Html.DisplayNameFor(model => model.Users)
+                </th>
+                <th>
+
+                </th>
+
+            </tr>
+        </thead>
+        <tbody>
+
+
+            @foreach (var item in Model)
+            {
+                <tr style="font-family:'Franklin Gothic';">
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Central)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Broker)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Certificate)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Port)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Groups)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Platform)
+                    </td>
+
+                    <td>
+                        @if (item.Users.Count() > 0)
+                        {
+                            if (!string.IsNullOrEmpty(item.Users[0].Username) && !string.IsNullOrEmpty(item.Users[0].Password))
+                            {
+                                <span style="font-weight:bold">User:</span>   @Html.DisplayFor(modelItem => item.Users[0].Username) <br />
+                                <span style="font-weight:bold">Pass:</span>  @Html.DisplayFor(modelItem => item.Users[0].Password)
+                            }
+                        }
+
+
+                    </td>
+                    <td>
+                        <a class="btn btn-warning btn-md" onclick="javascript:downloadCertClipBoard('@Html.DisplayFor(modelItem => item.CertificatePath)')">Download Certificate</a>
+
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/.RMS.InfoProvider.ObjectModel.RMSObjects" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/.RMS.InfoProvider.ObjectModel.RMSObjects" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://192.168.3.107:8000/InfoProviderCenter?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/.RMS.InfoProvider.ObjectModel" />
+  <xs:complexType name="ArrayOfRMSBridge">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="RMSBridge" nillable="true" type="tns:RMSBridge" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfRMSBridge" nillable="true" type="tns:ArrayOfRMSBridge" />
+  <xs:complexType name="RMSBridge">
+    <xs:sequence>
+      <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/.RMS.InfoProvider.ObjectModel" minOccurs="0" name="Central" type="q1:eCentral" />
+      <xs:element minOccurs="0" name="Certificate" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DealerId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Groups" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="InstanceName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PlatformAddress" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PlatformPort" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Securities" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RMSBridge" nillable="true" type="tns:RMSBridge" />
+  <xs:complexType name="RMSServer">
+    <xs:sequence>
+      <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/.RMS.InfoProvider.ObjectModel" minOccurs="0" name="Central" type="q2:eCentral" />
+      <xs:element minOccurs="0" name="CentralPort" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Certificate" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="InstanceName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ServerName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ServerPort" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Users" nillable="true" type="tns:ArrayOfUser" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RMSServer" nillable="true" type="tns:RMSServer" />
+  <xs:complexType name="ArrayOfUser">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="User" nillable="true" type="tns:User" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfUser" nillable="true" type="tns:ArrayOfUser" />
+  <xs:complexType name="User">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Password" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Username" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="User" nillable="true" type="tns:User" />
+</xs:schema>

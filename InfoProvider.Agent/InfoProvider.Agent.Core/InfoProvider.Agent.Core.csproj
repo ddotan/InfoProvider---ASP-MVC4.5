@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{FCBE4A4A-315C-4752-9AD4-03082C14520E}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>InfoProvider.Agent.Core</RootNamespace>
+    <AssemblyName>InfoProvider.Agent.Core</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="InfoProviderService.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\InfoProvider.Agent.Contract\InfoProvider.Agent.Contract.csproj">
+      <Project>{c4e26b8d-7b06-467f-b0dc-9e733d8035b1}</Project>
+      <Name>InfoProvider.Agent.Contract</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\InfoProvider.Agent.ObjectModel\InfoProvider.Agent.ObjectModel.csproj">
+      <Project>{d6f56379-d5d5-4d7b-8615-721a6d3f891e}</Project>
+      <Name>InfoProvider.Agent.ObjectModel</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\InfoProvider.Agent.TechnicalServices\InfoProvider.Agent.TechnicalServices.csproj">
+      <Project>{ebc1927b-3f11-432b-8ff5-2d6e9a6b5bd6}</Project>
+      <Name>InfoProvider.Agent.TechnicalServices</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\InfoProvider.Agent.Utilities\InfoProvider.Agent.Utilities.csproj">
+      <Project>{85cf14c6-b7ed-493e-9cdf-18f748a6b550}</Project>
+      <Name>InfoProvider.Agent.Utilities</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="76a8d002-f74a-4b36-b4e0-67c79e868403" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.Generic.List`1" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>false</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://192.168.3.107:8000/InfoProviderCenter" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="InfoProviderCenter.xsd" MetadataType="Schema" ID="33ee2657-51ab-40f1-8ac2-abd3bd28b3ab" SourceId="1" SourceUrl="http://192.168.3.107:8000/InfoProviderCenter?xsd=xsd1" />
+    <MetadataFile FileName="InfoProviderCenter1.xsd" MetadataType="Schema" ID="15afd8a2-6af7-4637-890f-ffb8ff037d1b" SourceId="1" SourceUrl="http://192.168.3.107:8000/InfoProviderCenter?xsd=xsd2" />
+    <MetadataFile FileName="InfoProviderCenter2.xsd" MetadataType="Schema" ID="a91c1ffd-2a18-418c-863c-273280c542c1" SourceId="1" SourceUrl="http://192.168.3.107:8000/InfoProviderCenter?xsd=xsd3" />
+    <MetadataFile FileName="InfoProviderCenter.wsdl" MetadataType="Wsdl" ID="67e16f7d-da27-40e8-9ef1-1f0fb90b5391" SourceId="1" SourceUrl="http://192.168.3.107:8000/InfoProviderCenter?wsdl" />
+    <MetadataFile FileName="InfoProviderCenter.disco" MetadataType="Disco" ID="44d4469e-89c1-4edb-90c1-2197253f5c42" SourceId="1" SourceUrl="http://192.168.3.107:8000/InfoProviderCenter?disco" />
+    <MetadataFile FileName="InfoProviderCenter3.xsd" MetadataType="Schema" ID="58115472-a6da-4537-bf24-8cd2f4efd0b3" SourceId="1" SourceUrl="http://192.168.3.107:8000/InfoProviderCenter?xsd=xsd4" />
+    <MetadataFile FileName="InfoProviderCenter4.xsd" MetadataType="Schema" ID="eafad5ea-8264-4761-b9b3-6da09c69cf72" SourceId="1" SourceUrl="http://192.168.3.107:8000/InfoProviderCenter?xsd=xsd0" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

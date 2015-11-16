@@ -1,0 +1,62 @@
+﻿@model IEnumerable<InfoProvider.Webs.Models.UserLoggedIn>
+
+@{
+    ViewBag.Title = "Logins";
+}
+<style>
+    #box-table-a th {
+        font-size: 13px;
+        font-weight: normal;
+        background: #b9c9fe;
+        border-top: 4px solid #aabcfe;
+        border-bottom: 1px solid #fff;
+        color: #039;
+        padding: 8px;
+    }
+
+    #box-table-a td {
+        background: #e8edff;
+        border-bottom: 1px solid #fff;
+        color: #669;
+        border-top: 1px solid transparent;
+        padding: 8px;
+    }
+
+    #box-table-a tr:hover td {
+        background: #d0dafd;
+        color: #339;
+    }
+</style>
+<h2 style="margin-left:45%">Logins</h2>
+
+<table id="box-table-a" style="margin-left:45%">
+    <thead>
+        <tr>
+            <th scope=”col”>
+                @Html.DisplayNameFor(model => model.Time)
+            </th>
+            <th scope=”col”>
+                @Html.DisplayNameFor(model => model.MachineName)
+            </th>
+            <th scope=”col”>
+                @Html.DisplayNameFor(model => model.IP)
+            </th>
+        </tr>
+    </thead>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Time)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MachineName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IP)
+            </td>
+
+        </tr>
+    }
+
+</table>
